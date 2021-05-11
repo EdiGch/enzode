@@ -32,3 +32,38 @@ print(create_employee("Marek", "Markiewicz", "500478965"))
 print("Hello", "world!")
 print("Hello", "world!", sep=" | ")
 print("Hello", "world!", sep=" | ", end=" **KONIEC LINI") """
+
+
+### funkcje z dowolną liczbą parametrów ####
+### *args - dowolnie *argu
+def many_arguments(*args):
+    for arg in args:
+        print(str(arg)[::-1])
+
+
+many_arguments("Ala", "ma", "kota")
+
+
+def many_arguments_second(_id, *args):
+    print(f"ID={_id}")
+    for arg in args:
+        print(str(arg)[::-1])
+
+
+many_arguments_second(1, "Ala", "ma", "kota")
+
+##### funkcja z parametrami nazwanymi ####
+### **kwargs - dowolnie *argu
+def many_keys(_id, fallback="BRAK", **kwargs):
+    # print(f"fname={kwargs['fname']}")
+    # print(f"fname={kwargs.get('fname')}")
+    print(f"fname={kwargs.get('fname', fallback)}")
+    print(f"fname={kwargs.get('fname', fallback)}")
+    print(f"fname={kwargs.get('email', fallback)}")
+
+
+#many_keys(fname="Jon", lname="Wick", email ="jw@host.pl") # opcjonalny
+#many_keys(fname="Jon", lname="Wick") # opcjonalny
+many_keys(123, fname="Jon", lname="Wick") # wymagany
+many_keys(123, fname="Jon", lname="Wick", fallback="*") # wymagany
+many_keys(123, fname="Jon", lname="Wick") # wymagany
