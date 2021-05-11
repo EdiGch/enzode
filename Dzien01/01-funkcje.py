@@ -1,8 +1,17 @@
 import math
 # Funkcje
 
+a = "Ala ma kota";
+b = 12.34
+a , b = "Ala ma kota", 12.34
+a = "ala ma kota"; b = 12.34 # nie w duchu pythona
+
+X = 10
+
 def test():
     #return
+    global x # Globalna w funkcji, (tylko dla przykładu)
+    print(x)
     pass
 
 # type hint dla parametrów funkcji
