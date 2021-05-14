@@ -1,0 +1,7 @@
+users = ('Grzegorz','Mateusz', 'Kamil', 'Łukasz', 'Krzysztof')
+print(users[0])
+print(users[1])
+print(users[4])
+print(users[-1])
+print(users[-2])
+print(users[-5])
