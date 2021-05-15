@@ -89,17 +89,112 @@ Krzysztof
 Grzegorz
 ```
 ### Wycinanie
-
-
-
-```
-```
+Operator dostępu [ ] moze służyć także do tworzenia "wycinków" kolekcji na podstawie oryginalnego obiektu.
 
 ```
+users = ('Grzegorz','Mateusz', 'Kamil', 'Łukasz', 'Krzysztof')
+print(users[1:3])
+('Mateusz', 'Kamil')
+print(users[2:4])
+('Kamil', 'Łukasz')
+print(users[:3])
+('Grzegorz', 'Mateusz', 'Kamil')
+print(users[2:])
+('Kamil', 'Łukasz', 'Krzysztof')
+print(users[:-1])
+('Grzegorz', 'Mateusz', 'Kamil', 'Łukasz')
+print(users[-2:])
+('Łukasz', 'Krzysztof')
 ```
+Podczas wycinania kolekcji możemy ustalić także "krok" wg. którego będą pobierane elementu w celu
+utworzenia nowego obiektu. Dzięki temu parametrowi możemy stworzyć kolekcję z np. co drugiego elementu oryginału.
+Ujemny krok oznacza rozpoczęcie tworzenia nowej kolekcji od końca.
 
 ```
+users = ('Grzegorz','Mateusz', 'Kamil', 'Łukasz', 'Krzysztof')
+print(users[0:4:2])
+('Grzegorz', 'Kamil')
+print(users[4:0:-1])
+('Krzysztof', 'Łukasz', 'Kamil', 'Mateusz')
+print(users[::3])
+('Grzegorz', 'Łukasz')
+print(users[::-1])
+('Krzysztof', 'Łukasz', 'Kamil', 'Mateusz', 'Grzegorz')
 ```
+
+### Funkcja len()
+Liczba elementów utworzonej kolekcji.
+```
+testList = []
+print(testList, 'length is', len(testList))
+[] length is 0
+testList = [1, 2, 3]
+print(testList, 'length is', len(testList))
+[1, 2, 3] length is 3
+testTuple = (1, 2, 3)
+print(testTuple, 'length is', len(testTuple))
+(1, 2, 3) length is 3
+testRange = range(1, 10)
+print('Length of', testRange, 'is', len(testRange))
+Length of range(1, 10) is 9
+```
+### Listy
+Lista jest mutowalną kolekcją. W odrużnieniu do niemutowalnej tupli, długośc listy jak i jej zawartość mogą zostać zmienione po jej utworzeniu. 
+**Pustą listę** możemy utworzyć na dwa sposoby - poprzez nawiasy kwadratowe [], lub używając konstruktora list().
+
+```
+[10,20,50,100,200]
+[]
+list()
+print(len([10,20,50,100]))
+4
+liczby = [10,20,30,50]
+print(liczby[2])
+30
+print(100 in liczby)
+False
+print(100 not in liczby)
+True
+```
+#### Tym czym **lista** różni się od tupli jest jej mutowalność - stan listy może być zmieniony po jej utworzeniu.
+Do zmiany pojedynczego elementu listy używamy operatora przypisania: 
+``` 
+numery = [20,40,80,160]
+numery[0] = 10
+print(numery)
+[10, 40, 80, 160]
+
+liczby = [10,20,50,100]
+liczby.append(200)
+print(liczby)
+[10, 20, 50, 100, 200]
+```
+Dodanie elementu pod wskazany indeksem umożliwia mmetoda insert() przyjmująca dwa parametry:
+* index - pod którym ma zostać umieszczony nowy element
+* warość 
+
+Możliwe jest także wykorzystanie wycinania w celu zastąpienia zadanego zakresu elementami z innej kolekcji:
+
+``` 
+liczby = [10,20,50,100]
+liczby.insert(0,5)
+print(liczby)
+[5, 10, 20, 50, 100]
+
+numery = [20,40,80,160]
+numery[1:3] = [1,2]
+print(numery)
+[20, 1, 2, 160]
+```
+Usunięcie elementu spod wskazanego indeksu relizowanie jest przy pomocy metody de;:
+``` 
+liczby = [10,20,50,100]
+del liczby[0]
+print(liczby)
+[20,50,100]
+```
+
+### Zbiory
 
 
 
