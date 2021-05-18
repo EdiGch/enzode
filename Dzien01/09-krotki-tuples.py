@@ -54,10 +54,24 @@ users = ('Grzegorz','Mateusz', 'Kamil', 'Łukasz', 'Krzysztof')
 # liczby.append(200)
 # print(liczby)
 
-liczby = [10,20,50,100]
-liczby.insert(0,5)
-print(liczby)
+# liczby = [10,20,50,100]
+# liczby.insert(0,5)
+# print(liczby)
+#
+# numery = [20,40,80,160]
+# numery[1:3] = [1,2]
+# print(numery)
 
-numery = [20,40,80,160]
-numery[1:3] = [1,2]
-print(numery)
+liczby = {10,20,50,100, 10, 100}
+print(liczby)
+print(len(liczby))
+
+a = {1,2,3}
+b = {2,3,4}
+print(a | b)
+print(a - b)
+print(a & b)
+print(a ^ b)
+
+liczby.add(200)
+print(liczby)

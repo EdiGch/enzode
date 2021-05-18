@@ -195,7 +195,40 @@ print(liczby)
 ```
 
 ### Zbiory
+Zbiór jest mutowalną kolekcją **przechowującą jedynie unikalne wartości** 
+#### Zbiór może zawierać jedynie elementy unikalne, dlatego też powielenie któregokolwiek z elementów nie wpływa na zwiększenie jego długości:
+Pusty zbiór tworzymy przy pomocy konstruktora set()
+Zaletą typu set() jest obsługa standardowych operatorów dla zbiorów matematycznych:
+* suma |
+* różnica -
+* iloczny &
+* różnica symetryczna ^
+``` 
+liczby = {10,20,50,100, 10, 100}
+print(liczby)
+{100, 10, 20, 50}
+print(len(liczby))
+4
 
+a = {1,2,3}
+b = {2,3,4}
+print(a | b)
+{1, 2, 3, 4}
+print(a - b)
+{1}
+print(a & b)
+{2, 3}
+print(a ^ b)
+{1, 4}
+
+liczby.add(200)
+print(liczby)
+{100, 200, 10, 50, 20}
+```
+Zbiór nie zachowuje oryginalnej kolejności przechowywania elementów dlatego też w przypadku zbiorów nie jest możliwe wykorzystanie operatora dostępu do elementu [ ]
+oraz wycinania. Korzystając jednak z konstruktorów list() lub tuple() możemy w łatwy sposób przekonwertować zbiór do kolekcji wspierającej indeksowanie.
+
+### Słowniki 
 
 
 ## Czym jest Type Hinting 
