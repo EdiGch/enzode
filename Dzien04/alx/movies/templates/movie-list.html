@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista filmów</title>
+</head>
+<body>
+
+<h2>Lista filmów</h2>
+<ul>
+
+    {% for movie in movies %}
+    <li>
+        <p>
+            <b>{{ movie.title }} - {{ movie.year|default_if_none:"Brak danych" }}</b><br/>
+            <i>{{ movie.description }}</i><br/>
+            <small>MPAA: {{ movie.get_mpaa_rating_display }}</small><br/>
+            {% if movie.poster|length > 0 %}
+            <a target="_blank" href="{{ media_url }}{{ movie.poster }}">Poster</a>
+            {% endif %}
+        </p>
+    </li>
+    {% endfor %}
+
+</ul>
+
+</body>
+</html>
