@@ -1,19 +1,12 @@
+# python 
+Szkolenie przeprowadzone przez firmę AlX https://www.alx.pl/pl/o-nas/ Data: 11.05.2021r
 
-Pobierani paczek z repo
-Środowisko wirtualne
--m venv venv 
 
-# Aktywacja środowiska wirtualnego 
-# wersja na windowsa
-venc\Scripts\activate
-Wersk na lin
-source venb/bin/activate
-Jeśteśmy w środku (w bombelku)
-Wyjście: deactivate
-Wejście: source venb/bin/activate
-
-## instalacja bib
-pip install -r requirements.txt
-
-### Uruchamianie skryptu
-python nazwa_pliku.py
+## Plan szkolenia 
+1. Podstawowe typy danych
+2. Wartości logiczne
+3. Struktury danych
+4. Czym jest Type Hinting
+5. FastApi
+6. DjangoResr
+7. Wzory Projektowe
